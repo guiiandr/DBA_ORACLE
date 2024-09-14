@@ -1,0 +1,26 @@
+REM   Script: Exercicio_21
+REM   Exercicio_21
+
+CREATE VIEW EXERCICIO_21 AS 
+ 
+SELECT  
+ 
+	DEPARTMENT_NAME AS DEPARTAMENTO, 
+	SUM(SALARY) AS SALARIO 
+ 
+FROM 
+ 
+	HR.EMP_DETAILS_VIEW 
+ 
+GROUP BY 
+ 
+	DEPARTMENT_NAME  
+ 
+HAVING  
+     
+    SUM(salary) > '5000' 
+     
+ORDER BY 
+     
+    SUM(SALARY);
+
